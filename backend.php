@@ -10,8 +10,8 @@ $data = $_POST;
 
     function fetch($address1, $address_2 = "", $city = "", $state = "", $zipCode = "")
     {
-        var_dump($address1);
-        $input_data = '<AddressValidateRequest USERID="105SELF02197">
+//        you need to put your userId in USERDID
+        $input_data = '<AddressValidateRequest USERID="use_your"> 
         <Revision>1</Revision>
         <Address ID="0">
         <Address1>' . "$address1" . '</Address1>
