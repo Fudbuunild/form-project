@@ -11,7 +11,7 @@ $data = $_POST;
     function fetch($address1, $address_2 = "", $city = "", $state = "", $zipCode = "")
     {
 //        you need to put your userId in USERDID
-        $input_data = '<AddressValidateRequest USERID="use_your"> 
+        $input_data = '<AddressValidateRequest USERID="105SELF02197"> 
         <Revision>1</Revision>
         <Address ID="0">
         <Address1>' . "$address1" . '</Address1>
@@ -96,7 +96,7 @@ if ($_POST['save_data']) {
                         CHARACTER SET utf8 COLLATE utf8_general_ci");
 
     $dataSave = [
-        'address1' => $data['address_1'], 'address2' => $data['address_2'], 'city' => $data['city'], 'state' => $data['state'], 'zip_code' => $data['zip-code']
+        'address1' => $data['address_1'], 'address2' => $data['address_2'], 'city' => $data['city'], 'state' => $data['state'], 'zip_code' =>(int)$data['zip-code']
     ];
     $sql = "INSERT INTO information (address1, address2, city, state, zip_code) VALUES (:address1, :address2, :city, :state, :zip_code)";
     $stmt= $pdo->prepare($sql);

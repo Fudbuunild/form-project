@@ -30,14 +30,22 @@ document.querySelector('#send').addEventListener('click', function (e) {
 
             if (matchError.test(xhr.responseText)) {
                 document.querySelector('#error').innerHTML = xhr.responseText
+                document.querySelector('#usps-error').innerHTML = xhr.responseText
                 document.querySelector('#save').classList.add('d-none')
                 data.delete('save_data');
             } else {
-                document.querySelector('#address-1').innerHTML = address_1;
-                document.querySelector('#address-2').innerHTML = address_2;
-                document.querySelector('#city-1').innerHTML = city;
-                document.querySelector('#state-1').innerHTML = state;
-                document.querySelector('#zip-code-1').innerHTML = zip_code;
+
+                document.querySelector('#usps-address-1').value = address_1;
+                document.querySelector('#usps-address-2').value = address_2;
+                document.querySelector('#usps-city-1').value = city;
+                document.querySelector('#usps-state-1').value = state;
+                document.querySelector('#usps-zip-code-1').value = zip_code;
+                console.log(xhr.response);
+                document.querySelector('#address-1').value = address_1;
+                document.querySelector('#address-2').value = address_2;
+                document.querySelector('#city-1').value = city;
+                document.querySelector('#state-1').value = state;
+                document.querySelector('#zip-code-1').value = zip_code;
                 document.querySelector('#save').classList.remove('d-none')
             }
         }
@@ -68,11 +76,12 @@ document.querySelector('#save').addEventListener('click', function (e) {
                 document.querySelector('#error').innerHTML = xhr.responseText
                 document.querySelector('#save').classList.add('d-none')
             } else {
-                document.querySelector('#address-1').innerHTML = address_1;
-                document.querySelector('#address-2').innerHTML = address_2;
-                document.querySelector('#city-1').innerHTML = city;
-                document.querySelector('#state-1').innerHTML = state;
-                document.querySelector('#zip-code-1').innerHTML = zip_code;
+                document.querySelector('#address-1').value = address_1;
+                document.querySelector('#address-2').value = address_2;
+                document.querySelector('#city-1').value = city;
+                document.querySelector('#state-1').value = state;
+                document.querySelector('#zip-code-1').value = zip_code;
+
                 document.querySelector('#save').classList.remove('d-none')
             }
         }
