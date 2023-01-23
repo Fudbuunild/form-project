@@ -118,54 +118,44 @@
                 <div id="close">X</div>
 
                 <p>Which address format do you want to save?</p>
-                <ul class="nav nav-pills mb-3" id="pills-tab" role="tablist">
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link active" id="pills-home-tab" data-bs-toggle="pill"
-                                data-bs-target="#pills-home" type="button" role="tab" aria-controls="pills-home"
-                                aria-selected="true">ORIGINAL
-                        </button>
-                    </li>
-                    <li class="nav-item" role="presentation">
-                        <button class="nav-link" id="pills-profile-tab" data-bs-toggle="pill"
-                                data-bs-target="#pills-profile" type="button" role="tab" aria-controls="pills-profile"
-                                aria-selected="false">STANDARDIZED (USPS)
-                        </button>
-                    </li>
-                </ul>
-                <div class="tab-content" id="pills-tabContent">
-                    <div class="tab-pane fade show active" id="pills-home" role="tabpanel"
-                         aria-labelledby="pills-home-tab">
-                        <div class="tab-pane fade" id="pills-profile" role="tabpanel"
-                             aria-labelledby="pills-profile-tab">
-                            <p id="error"></p>
-                            <p id="address-1">
-                            <p>
-                            <p id="address-2">
-                            <p>
-                            <p id="city-1">
-                            <p>
-                            <p id="state-1">
-                            <p>
-                            <p id="zip-code-1">
-                            <p>
-                        </div>
-                        <div class="tab-pane fade" id="pills-contact" role="tabpanel"
-                             aria-labelledby="pills-contact-tab">
-                            <p id="usps-error"></p>
-                            <p id="usps-address-1">
-                            <p>
-                            <p id="usps-address-2">
-                            <p>
-                            <p id="usps-city-1">
-                            <p>
-                            <p id="usps-state-1">
-                            <p>
-                            <p id="usps-zip-code-1">
-                            <p>
-                        </div>
+                    <!-- Tab links -->
+                    <div class="tab">
+                        <button class="tablinks original" onclick="openTab(event, 'original')">Original</button>
+                        <button class="tablinks usps" onclick="openTab(event, 'usps')">Usps</button>
                     </div>
-                        <button id="save" type="submit" class="btn btn-primary">Save</button>
-                </div>
+
+                    <!-- Tab content -->
+                    <div id="original" class="tabcontent">
+                        <p id="error"></p>
+                        <p id="address-1">
+                        <p>
+                        <p id="address-2">
+                        <p>
+                        <p id="city-1">
+                        <p>
+                        <p id="state-1">
+                        <p>
+                        <p id="zip-code-1">
+                        <p>
+                    </div>
+
+                    <div id="usps" class="tabcontent">
+                        <p id="usps-error"></p>
+                        <div class="hello24"></div>
+                        <p id="usps-address-1">
+                        <p>
+                        <p id="usps-address-2">
+                        <p>
+                        <p id="usps-city-1">
+                        <p>
+                        <p id="usps-state-1">
+                        <p>
+                        <p id="usps-zip-code-1">
+                        <p>
+                    </div>
+
+                    <button id="save" type="submit" class="btn btn-primary">Save</button>
+<!--                </div>-->
             </div>
         </div>
     </div>
